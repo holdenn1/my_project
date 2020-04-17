@@ -1,0 +1,9 @@
+.header {
+    grid-area: h;
+    background: goldenrod;
+}
+
+.img {
+    max-width: 40px;
+    padding: 10px;
+}
