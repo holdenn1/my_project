@@ -3,6 +3,19 @@
     background: brown;
 }
 
-.item{
-    color: #cccccc;
+.item {
+    margin: 10px;
 }
+
+.item a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.item a.activeLink {
+    color: rebeccapurple;
+}
+
+
+
