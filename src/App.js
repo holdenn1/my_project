@@ -14,7 +14,7 @@ function App() {
             <div className="wrapper">
                 <Nav/>
                 <div className="app-wrapper-content">
-                    <Route path='/dialogs'>
+                    <Route path='/chat'>
                         <Dialogs/>
                     </Route>
                     <Route path='/profile'>

@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {loadJson} from "./../../../loadJson";
 import Users from "../Users";
 import styles from './ChatList.module.css'
+import {NavLink} from "react-router-dom";
+
+
 
 class UsersList extends Component {
     constructor(props) {
@@ -17,7 +20,7 @@ class UsersList extends Component {
         this.setState({
             isFetching: true,
         });
-        setTimeout(() => {
+
             loadJson('./users.json')
                 .then(data => {
                     this.setState({
@@ -31,14 +34,16 @@ class UsersList extends Component {
                         isFetching: false,
                     })
                 })
-        }, 2000);
+
     }
 
     renderUsers = () => {
         const { users } = this.state;
         return users.map( user => (
             <li className={styles.list} key={user.id}>
-                <Users user={user}/>
+                <NavLink activeClassName={styles.active} to={`${"/chat/"} ${user.id}`}>
+                    <Users  user={user}/>
+                </NavLink>
             </li>
         ) );
     };

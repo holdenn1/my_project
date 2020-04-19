@@ -3,7 +3,7 @@ import styles from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
 import UsersList from "./ChatLIst";
 
-const Dialog = (props) => {
+/*const Dialog = (props) => {
     let path = "/dialogs/" + props.id;
     return (
         <div className={styles.dialog}>
@@ -12,7 +12,7 @@ const Dialog = (props) => {
             </NavLink>
         </div>
     )
-};
+};*/
 
 const Message = (props) => {
     return(
@@ -48,7 +48,7 @@ const Dialogs = () => {
 
     ];
 
-    let DialogData = data.map(data => <Dialog name={data.name} id={data.id}/>);
+    /*let DialogData = data.map(data => <Dialog name={data.name} id={data.id}/>);*/
 
     let messageData = [
         {
