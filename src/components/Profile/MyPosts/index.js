@@ -3,6 +3,22 @@ import styles from './MyPosts.module.css'
 import Post from "./Post";
 
 const MyPosts = () => {
+
+    let data = [
+        {
+            id:1,
+            message: "Hi, how are yoy?",
+            like: 15
+        },
+        {
+            id:3,
+            message: "It's my post!",
+            like: 25
+        }
+    ];
+
+    let posts = data.map( post => <Post id={post.id} message={post.message} like={post.like}/>);
+
     return (
         <div>
             My post
@@ -12,8 +28,7 @@ const MyPosts = () => {
                 <button>REMOVE</button>
             </div>
             <div>
-                <Post message='Hi, how are yoy?' like="15"/>
-                <Post message="It's my post" like="20"/>
+                {posts}
             </div>
         </div>
     )
