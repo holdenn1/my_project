@@ -1,19 +1,11 @@
-.app-wrapper {
-    display: grid;
-    grid-template: "h h" "n c";
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
-    grid-gap: 10px;
-    margin: 0 auto;
-    max-width: 100%;
-}
-
 .app-wrapper-content{
-    grid-area: c;
     background: cadetblue;
+    width: 100%;
 }
 
-
+.wrapper{
+    display: flex;
+}
 
 
 
