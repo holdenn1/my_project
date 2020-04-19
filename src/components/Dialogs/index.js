@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
+import UsersList from "./ChatLIst";
 
 const Dialog = (props) => {
     let path = "/dialogs/" + props.id;
@@ -69,7 +70,7 @@ const Dialogs = () => {
     return(
         <div className={styles.dialogs}>
             <div className={styles.dialogsItem}>
-                {DialogData}
+                <UsersList/>
             </div>
             <div className={styles.messages}>
                 {messages}
