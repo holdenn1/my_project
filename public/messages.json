@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "message": "Hello"
+  },
+  {
+    "id": 2,
+    "message": "Hi"
+  },
+  {
+    "id": 3,
+    "message": "How are you"
+  },
+  {
+    "id": 4,
+    "message": "I'm Ok!"
+  }
+]
