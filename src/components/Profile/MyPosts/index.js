@@ -1,37 +1,65 @@
-import React from "react";
+import React, {Component} from "react";
 import styles from './MyPosts.module.scss'
-import Post from "./Post";
+import {loadJson} from "../../../loadJson";
 
-const MyPosts = () => {
-
-    let data = [
-        {
-            id:1,
-            message: "Hi, how are yoy?",
-            like: 15
-        },
-        {
-            id:3,
-            message: "It's my post!",
-            like: 25
+class MyPosts extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts: [],
+            isFetching: true,
+            error: null,
         }
-    ];
+    }
 
-    let posts = data.map( post => <Post id={post.id} message={post.message} like={post.like}/>);
+    componentDidMount() {
+        this.setState({
+            isFetching: true,
+        });
 
-    return (
-        <div>
-            My post
+        loadJson('./posts.json')
+            .then(data => {
+                this.setState({
+                    posts: data,
+                    isFetching: false,
+                })
+            })
+            .catch(err => {
+                this.setState({
+                    error: err,
+                    isFetching: false,
+                })
+            })
+    }
+
+    renderPosts = () => {
+        const {posts} = this.state;
+        return posts.map(post => (
+            <ul>
+                <img className={styles.avatar} src={post.src} alt=""/>
+                <li key={post.id}>{post.like}</li>
+                <li key={post.id}>{post.message}</li>
+            </ul>
+        ));
+    };
+
+    render() {
+        return (
             <div>
-                <textarea name="" id="" cols="25" rows="5"></textarea>
-                <button>ADD POST</button>
-                <button>REMOVE</button>
+               <span>my posts</span>
+                    <ol>
+                        {
+                            this.renderPosts()
+                        }
+                    </ol>
+                <div>
+                    <textarea name="" id="" cols="25" rows="5"></textarea>
+                    <button>ADD POST</button>
+                    <button>REMOVE</button>
+                </div>
             </div>
-            <div>
-                {posts}
-            </div>
-        </div>
-    )
+        );
+    }
 }
 
 export default MyPosts;

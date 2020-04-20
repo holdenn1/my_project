@@ -1,5 +1,4 @@
 import React from "react";
-import styles from './Profile.module.scss'
 import MyPosts from "./MyPosts";
 import ProfileInfo from "./ProfileInfo";
 
@@ -10,6 +9,6 @@ const Profile = () => {
             <MyPosts/>
         </div>
     )
-}
+};
 
 export default Profile;

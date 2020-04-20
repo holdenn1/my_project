@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {loadJson} from "./../../../loadJson";
-import styles from '../ChatLIst/ChatList.module.scss'
-import Messages from "../Messages";
-
+import styles from './MessagesList.module.scss';
 
 
 class MessagesList extends Component {
@@ -39,11 +37,10 @@ class MessagesList extends Component {
     renderMessages = () => {
         const { messages } = this.state;
         return messages.map( message => (
-            <li className={styles.list} key={message.id}>
+            <ul>
+                <li className={styles.list} key={message.id}>{message.message}</li>
+            </ul>
 
-                    <Messages  message={message}/>
-
-            </li>
         ) );
     };
 

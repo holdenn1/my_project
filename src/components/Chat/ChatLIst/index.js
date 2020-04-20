@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import {loadJson} from "./../../../loadJson";
-import Users from "../Users";
 import styles from './ChatList.module.scss'
 import {NavLink} from "react-router-dom";
 
 
 
-class UsersList extends Component {
+class ChatList extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -42,7 +41,11 @@ class UsersList extends Component {
         return users.map( user => (
             <li className={styles.list} key={user.id}>
                 <NavLink activeClassName={styles.active} to={`${"/chat/"}` + `${user.id}`}>
-                    <Users  user={user}/>
+                    <ul>
+                        <li>
+                            {user.name}
+                        </li>
+                    </ul>
                 </NavLink>
             </li>
         ) );
@@ -59,4 +62,4 @@ class UsersList extends Component {
     }
 }
 
-export default UsersList;
+export default ChatList;

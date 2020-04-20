@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Chat.module.scss'
-import UsersList from "./ChatLIst";
+import ChatList from "./ChatLIst";
 import MessagesLst from "./MessagesList";
 
 const Dialogs = () => {
@@ -8,7 +8,7 @@ const Dialogs = () => {
     return(
         <div className={styles.dialogs}>
             <div className={styles.dialogsItem}>
-                <UsersList/>
+                <ChatList/>
             </div>
             <div className={styles.messages}>
                 <MessagesLst/>
