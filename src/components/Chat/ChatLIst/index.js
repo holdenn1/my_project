@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {loadJson} from "./../../../loadJson";
 import Users from "../Users";
-import styles from './ChatList.module.css'
+import styles from './ChatList.module.scss'
 import {NavLink} from "react-router-dom";
 
 
@@ -41,7 +41,7 @@ class UsersList extends Component {
         const { users } = this.state;
         return users.map( user => (
             <li className={styles.list} key={user.id}>
-                <NavLink activeClassName={styles.active} to={`${"/chat/"} ${user.id}`}>
+                <NavLink activeClassName={styles.active} to={`${"/chat/"}` + `${user.id}`}>
                     <Users  user={user}/>
                 </NavLink>
             </li>

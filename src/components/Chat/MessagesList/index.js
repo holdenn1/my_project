@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {loadJson} from "./../../../loadJson";
-import styles from './../ChatLIst/ChatList.module.css'
+import styles from '../ChatLIst/ChatList.module.scss'
 import Messages from "../Messages";
 
 

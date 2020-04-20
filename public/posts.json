@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "message": "Hi, how are yoy?",
+    "like": 15
+  },
+  {
+    "id": 1,
+    "message": "It's my post!",
+    "like": 25
+  }
+]

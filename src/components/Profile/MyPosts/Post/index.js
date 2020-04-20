@@ -1,5 +1,9 @@
 import React from "react";
-import styles from "./Post.module.css"
+import styles from "./Post.module.scss"
+
+
+
+
 
 const Post = (props) => {
 
@@ -11,7 +15,7 @@ const Post = (props) => {
             <span>like{props.like}</span>
         </div>
     )
-}
+};
 
 
 export default Post
