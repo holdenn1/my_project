@@ -1,22 +1,27 @@
 [
   {
     "id": 1,
-    "name": "Helen"
+    "name": "Helen",
+    "src": "https://i.mdel.net/i/db/2019/4/1101537/1101537-500w.jpg"
   },
   {
     "id": 2,
-    "name": "Victor"
+    "name": "Victor",
+    "src": "https://www.phdmedia.com/russia/wp-content/uploads/sites/74/2015/05/temp-people-profile.jpg"
   },
   {
     "id": 3,
-    "name": "Java"
+    "name": "Dwayne",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Dwayne_Johnson_2%2C_2013.jpg"
   },
   {
     "id": 4,
-    "name": "John"
+    "name": "John",
+    "src": "https://www.biography.com/.image/t_share/MTIwNjA4NjMzNzAzNzI4NjUy/john-cena-562300-1-402.jpg"
   },
   {
     "id": 5,
-    "name": "Din"
+    "name": "Din",
+    "src": "https://thumbs.dfs.ivi.ru/storage9/contents/4/a/9061b3040d55e917a9bfbc39065a90.jpg"
   }
 ]

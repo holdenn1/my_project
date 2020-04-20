@@ -33,16 +33,16 @@ class ChatList extends Component {
                         isFetching: false,
                     })
                 })
-
     }
 
     renderUsers = () => {
         const { users } = this.state;
         return users.map( user => (
             <li className={styles.list} key={user.id}>
-                <NavLink activeClassName={styles.active} to={`${"/chat/"}` + `${user.id}`}>
+                <NavLink className={styles.chatContainer} activeClassName={styles.active} to={`${"/chat/"}` + `${user.id}`}>
+                    <img className={styles.photo} src={user.src} alt=""/>
                     <ul>
-                        <li>
+                        <li className={styles.name}>
                             {user.name}
                         </li>
                     </ul>

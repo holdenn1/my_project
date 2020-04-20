@@ -12,4 +12,17 @@ a {
     text-decoration: none;
 }
 
+.photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+}
 
+.chatContainer{
+    display: flex;
+}
+
+.name{
+    padding: 15px 10px;
+}

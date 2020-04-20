@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './Nav.module.scss';
 import {NavLink} from "react-router-dom";
+import Items from "./NavBarUserItems";
 
 const Nav= () => {
     return(
@@ -14,8 +15,9 @@ const Nav= () => {
                 <NavLink activeClassName={styles.activeLink} to="/settings">Settings</NavLink>
             </li>
         </ul>
+        <Items/>
     </nav>
     )
-}
+};
 
 export default Nav;
