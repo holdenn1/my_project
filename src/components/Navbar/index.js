@@ -5,13 +5,15 @@ import {NavLink} from "react-router-dom";
 const Nav= () => {
     return(
     <nav className={styles.nav}>
-        <div className={styles.item}>
-            <NavLink activeClassName={styles.activeLink} to="/profile">Profile</NavLink>
-        </div>
-        <div className={styles.item}><NavLink activeClassName={styles.activeLink} to="/chat">Chat</NavLink></div>
-        <div className={styles.item}><NavLink activeClassName={styles.activeLink} to="/news">News</NavLink></div>
-        <div className={styles.item}><NavLink activeClassName={styles.activeLink} to="/music">Music</NavLink></div>
-        <div className={styles.item}><NavLink activeClassName={styles.activeLink} to="/settings">Settings</NavLink></div>
+        <ul>
+            <li className={styles.item}>
+                <NavLink activeClassName={styles.activeLink} to="/profile">Profile</NavLink>
+                <NavLink activeClassName={styles.activeLink} to="/chat">Chat</NavLink>
+                <NavLink activeClassName={styles.activeLink} to="/news">News</NavLink>
+                <NavLink activeClassName={styles.activeLink} to="/music">Music</NavLink>
+                <NavLink activeClassName={styles.activeLink} to="/settings">Settings</NavLink>
+            </li>
+        </ul>
     </nav>
     )
 }
