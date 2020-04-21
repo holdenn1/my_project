@@ -53,11 +53,13 @@ class ChatList extends Component {
 
     render () {
         return(
+            <div>
             <ol>
                 {
                     this.renderUsers()
                 }
             </ol>
+            </div>
         );
     }
 }

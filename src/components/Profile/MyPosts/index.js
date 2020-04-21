@@ -52,11 +52,6 @@ class MyPosts extends Component {
                             this.renderPosts()
                         }
                     </ol>
-                <div>
-                    <textarea name="" id="" cols="25" rows="5"></textarea>
-                    <button>ADD POST</button>
-                    <button>REMOVE</button>
-                </div>
             </div>
         );
     }
